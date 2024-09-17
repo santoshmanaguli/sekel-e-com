@@ -8,3 +8,8 @@
 .productTitle:hover{
   color: lightcoral;
 }
+
+.cart-icon{
+  text-decoration: none;
+  color: black;
+}
