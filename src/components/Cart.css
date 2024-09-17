@@ -1,0 +1,27 @@
+.cart-container {
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-summary {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cart-summary h3 {
+  font-size: 24px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-warning {
+  margin-top: 10px;
+}
