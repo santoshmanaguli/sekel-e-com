@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addToCart, updateTotal } from "../redux/cartSlice";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -19,6 +20,7 @@ const ProductDetails = () => {
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
     dispatch(updateTotal());
+    toast.success(`${product.title} added to cart!`);
   };
 
   const renderStars = (ratings) => {

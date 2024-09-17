@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { addToCart, updateTotal } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
 import "./ProductList.css";
+import { toast } from 'react-toastify';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -20,6 +21,7 @@ const ProductList = () => {
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
     dispatch(updateTotal());
+    toast.success(`${product.title} added to cart!`);
   };
 
   const renderStars = (ratings) => {
